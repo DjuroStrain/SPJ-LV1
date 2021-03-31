@@ -1,20 +1,29 @@
-function addRow() {
-    var table = document.getElementById("Tablica");
-    var row = document.createElement("tr");
-    var cell = document.createElement("td");
-    var cellText = document.createTextNode(document.getElementById("nazivPredmeta").value);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
 
-    var cell = document.createElement("td");
-    var cellText = document.createTextNode(document.getElementById("godina").value);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
+        var checkRow = 0;
+    function addRowToTable()
+    {
+        
+        checkRow++;
+        var tbody = $('tbody');
+        var nazivPredmeta = $('#nazivPredmeta').val();
+        var godina = $('#godina').val();
+        var smjer = $('#smjer').val();
+        tbody.append 
+        (
+                                            '<tr id="'+checkRow+'">'+
+                                            
+												'<td>'+ nazivPredmeta+'</td>'+
+												'<td>'+ godina+'</td>'+
+												'<td>'+ smjer+'</td>'+
+												'<td>'+ '<button type="button" onclick="deleteRow('+ checkRow +')" class="btn btn-default"><span class="fas fa-trash"/>' + '</button>' +'</td>' +												
+											'</tr>'
+        )
+        
+    }
 
-    var cell = document.createElement("td");
-    var cellText = document.createTextNode(document.getElementById("smjer").value);
-    cell.appendChild(cellText);
-    row.appendChild(cell);
-    table.appendChild(row);
+    function deleteRow(checkRow) {
+        
+        var row = $('tbody #'+checkRow);
+        row.remove();
     }
     

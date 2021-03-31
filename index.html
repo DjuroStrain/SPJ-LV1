@@ -21,20 +21,20 @@
     <br>
     <input type="text" placeholder="Smjer" id="smjer"  class"inp"> 
     <br>
-    <button type="button" onclick="addRow()" class="btn btn-success">Dodaj</button>
+    <button type="button" onclick="addRowToTable()" class="btn btn-success">Dodaj</button>
     <br><br>
 
     <table id="Tablica" class="table">
-        <head>
+        <thead>
             <tr>
                 <th>Naziv predmeta</th>
                 <th>Godina</th>
                 <th>Smjer</th>
+                <th>Izbrisi</th>
             </tr>
-        </head>
-        <body id="table-body">
-
-        </body>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
     </table>
     <script src="assets/plugins/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/plugins/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
