@@ -22,6 +22,8 @@
         
     }
 
+    
+
     function deleteRow(checkRow) {
         
         var row = $('tbody #'+checkRow);
